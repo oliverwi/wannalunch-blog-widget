@@ -1,0 +1,173 @@
+.wannalunch_widget_container {
+  azimuth: center !important;
+  background-attachment: scroll !important;
+  background-color: rgb(248, 245, 245) !important;
+  background-image: none !important;
+  background-position: 0% 0% !important;
+  background-repeat: repeat !important;
+  border-collapse: separate !important;
+  border-spacing: 0 !important;
+  border-width: 0 !important;
+  bottom: auto !important;
+  caption-side: top !important;
+  clear: none !important;
+  clip: auto !important;
+  color: rgb(121, 125, 151) !important;
+  content: normal !important;
+  counter-increment: none !important;
+  counter-reset: none !important;
+  cursor: auto !important;
+  direction: ltr !important;
+  elevation: level !important;
+  empty-cells: show !important;
+  float: none !important;
+  font-family: Helvetica, Tahoma, Verdana, sans-serif !important;
+  font-size: 12px !important;
+  font-variant: normal !important;
+  font-weight: normal !important;
+  height: auto !important;
+  left: auto !important;
+  letter-spacing: normal !important;
+  line-height: normal !important;
+  list-style-image: none !important;
+  list-style-position: outside !important;
+  list-style-type: disc !important;
+  max-height: none !important;
+  max-width: none !important;
+  min-height: 0 !important;
+  max-width: 580px !important;
+  orphans: 2 !important;
+  outline-color: invert !important;
+  outline-style: none !important;
+  outline-width: medium !important;
+  overflow: visible !important;
+  page-break-after: auto !important;
+  page-break-before: auto !important;
+  page-break-inside: auto !important;
+  table-layout: auto !important;
+  text-align: left !important;
+  text-decoration: none !important;
+  text-indent: 0 !important;
+  text-transform: none !important;
+  top: auto !important;
+  unicode-bidi: normal !important;
+  vertical-align: baseline !important;
+  visibility: visible !important;
+  white-space: normal !important;
+  widows: 2 !important;
+  width: auto !important;
+  word-spacing: normal !important;
+}
+
+.wannalunch_widget_container a, .wannalunch_widget_container a:visited {
+  color: rgb(0, 152, 255) !important;
+  text-decoration: none !important;
+}
+
+.wannalunch_widget_container a:hover {
+  color: rgba(0, 152, 255, 0.7) !important;
+}
+
+.wannalunch_widget_container p {
+  margin: 10px 0px !important;
+  padding: 0px !important;
+}
+
+.wannalunch_widget_header {
+  background-color: rgb(0, 152, 255) !important;
+  color: rgb(255, 255, 255) !important;
+  padding-top: 3px !important;
+  padding-bottom: 3px !important;
+}
+
+.wannalunch_widget_header_logo {
+  background: url('wl.png') no-repeat !important;
+  height: 29px !important;
+  margin-top: -3px !important;
+  position: absolute !important;
+  width: 45px !important;
+}
+
+.wannalunch_widget_header_left {
+  float: left !important;
+  margin-left: 80px !important;
+}
+
+.wannalunch_widget_header_right {
+  margin-left: 215px !important;
+}
+
+.wannalunch_widget_inner {
+  overflow: hidden !important;
+}
+
+.wannalunch_widget_logo {
+  background: url('wannalunch.png') no-repeat !important;
+  height: 17px !important;
+  width: 117px !important;
+}
+
+.wannalunch_widget_left, .wannalunch_widget_right {
+  margin-bottom: -1000px !important;
+  padding-bottom: 1000px !important;
+}
+
+.wannalunch_widget_left {
+  background-color: rgb(237, 234, 234) !important; 
+  float: left !important;
+  padding-left: 15px !important;
+  width: 185px !important;
+}
+
+.wannalunch_widget_right {
+  margin-left: 215px !important;
+}
+
+.wannalunch_widget_host_info {
+  padding-right: 5px !important;
+  margin-top: 10px !important;
+  margin-left: 65px !important;
+}
+
+img.wannalunch_widget_host_photo {
+  float: left !important;
+  margin-top: 10px !important;
+}
+
+.wannalunch_widget_wannas {
+  clear: both;
+  margin-top: 30px !important;
+}
+
+.wannalunch_widget_wannas_header {
+  margin: 4px 0 !important;
+}
+
+.wannalunch_widget_wannas_imgs img {
+  margin-right: 4px !important;
+  margin-bottom: 0px !important;
+}
+
+.wannalunch_widget_actions {
+  margin: 20px 0 !important;
+}
+
+.wannalunch_widget_container a.wannalunch_widget_action_join {
+  background-color: rgb(0, 152, 255) !important;
+  border-radius: 5px !important;
+  color: rgb(255, 255, 255) !important;
+  font-size: 24px !important;
+  font-weight: bold !important;
+  padding: 8px 12px !important;
+  margin-right: 15px !important;
+  -moz-border-radius: 5px !important;
+  -webkit-border-radius: 5px !important;
+}
+
+.wannalunch_widget_container a.wannalunch_widget_action_join:hover {
+  background-color: rgba(0, 152, 255, 0.7) !important;
+}
+
+.wannalunch_widget_container a.wannalunch_widget_action_sub {
+  font-size: 14px !important;
+}

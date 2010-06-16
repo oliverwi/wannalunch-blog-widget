@@ -1,0 +1,7 @@
+Wannalunch API spec:
+
+http://docs.google.com/a/fraktal.ee/Doc?docid=0AQSfQMaL1fANZGR0Ym43Z2pfMTRnanY2eHI2Zg&hl=en&invite=COGT-vYK
+
+Spec:
+
+https://docs.google.com/a/fraktal.ee/document/edit?id=1k_cWfl3aB5RQ2A14bhj5wsbJ6SxxzJXy9jVM58qfb0c&hl=en&invite=CNe46ecH
