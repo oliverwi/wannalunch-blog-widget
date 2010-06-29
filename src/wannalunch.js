@@ -4,10 +4,11 @@ if (typeof Wannalunch == "undefined" || !Wannalunch) {
 
 (function() {
     
-    var wlHost = 'http://simple-meadow-22.heroku.com',
+    var wlHost = 'http://wannalunch.com',
         wlCreateLunchUrl = 'http://wannalunch.com',
         wlCssLoaded = false,
-        wlCssHref = '../src/wannalunch.css';
+        wlCssHref = '../src/wannalunch.css',
+        wlSplits = {'I': 'I pay', 'YOU': 'You pay', 'SPLIT': 'We split'};
     
     Wannalunch.Widget = function(options) {
         this._options = options;
@@ -39,6 +40,10 @@ if (typeof Wannalunch == "undefined" || !Wannalunch) {
             }
         },
         
+        _whoPaysLabel: function() {
+            return wlSplits[this._data.whoPays];
+        },
+        
         _writeHtml: function() {
             if (this._data) {
                 var html = '';
@@ -55,14 +60,15 @@ if (typeof Wannalunch == "undefined" || !Wannalunch) {
                 html += '</div>';
                 if (this._data.wannas.length > 0) {
                     html += '<div class="wannalunch_widget_wannas"><div class="wannalunch_widget_wannas_header">Going</div>';
-                    html += '<div class="wannalunch_widget_wannas_imgs">';
-                    for (var i = 0, l = this._data.wannas.length; i < Math.min(l, 3); i++) {
-                        html += '<img src="' + this._data.wannas[i].img + '" alt="' + this._data.wannas[i].name + '" />';
-                    }
-                    html += '</div>';
                     html += '<div class="wannalunch_widget_wannas_info">';
+                    html += '$ ' + this._whoPaysLabel() + '<br/>';
                     if (this._data.wannas.length > 3) {
                         html += '+ ' + (this._data.wannas.length - 3) + ' more';
+                    }
+                    html += '</div>'; // wannas_info
+                    html += '<div class="wannalunch_widget_wannas_imgs">';
+                    for (var i = 0, l = this._data.wannas.length; i < Math.min(l, 2); i++) {
+                        html += '<img src="' + this._data.wannas[i].img + '" alt="' + this._data.wannas[i].name + '" width="50" height="50" />';
                     }
                     html += '</div>';
                     html += '</div>';

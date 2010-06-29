@@ -135,7 +135,7 @@ img.wannalunch_widget_host_photo {
 }
 
 .wannalunch_widget_wannas {
-  clear: both;
+  clear: both !important;
   margin-top: 30px !important;
 }
 
@@ -143,9 +143,19 @@ img.wannalunch_widget_host_photo {
   margin: 4px 0 !important;
 }
 
+.wannalunch_widget_wannas_imgs {
+  width: 110px !important;
+}
+
 .wannalunch_widget_wannas_imgs img {
   margin-right: 4px !important;
   margin-bottom: 0px !important;
+}
+
+.wannalunch_widget_wannas_info {
+  margin-left: 120px !important;
+  margin-top: 14px !important;
+  position: absolute !important;
 }
 
 .wannalunch_widget_actions {
