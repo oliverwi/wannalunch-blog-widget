@@ -12,9 +12,7 @@ if (typeof Wannalunch == "undefined" || !Wannalunch) {
     
     Wannalunch.Widget = function(options) {
         this._options = options;
-    
-        // TODO: widget must have unique id here
-        this._containerElId = 'wl_widget'
+        this._containerElId = 'wl_widget_' + (new Date()).getTime();
     }
     
     Wannalunch.Widget.prototype = {
@@ -42,6 +40,30 @@ if (typeof Wannalunch == "undefined" || !Wannalunch) {
         
         _whoPaysLabel: function() {
             return wlSplits[this._data.whoPays];
+        },
+        
+        _loadJsonp: function(url, callback) {
+            var jsonp = 'jsonp' + (new Date()).getTime(),
+                head = document.getElementsByTagName('head')[0] || document.documentElement,
+                script = document.createElement('script');
+
+            window[jsonp] = function(data) {
+                callback(data);
+
+                // Clean up
+                window[jsonp] = undefined;
+                try {
+                    delete window[jsonp];
+                } catch (e) {}
+
+                if (script) {
+                    head.removeChild(script);
+                }
+            }
+
+    		script.src = url.replace(/\=\?(&|$)/, '=' + jsonp + '$1');
+
+    		head.insertBefore(script, head.firstChild);
         },
         
         _writeHtml: function() {
@@ -95,7 +117,7 @@ if (typeof Wannalunch == "undefined" || !Wannalunch) {
             document.write('<div id="' + this._containerElId + '" class="wannalunch_widget_container"></div>');
     
             var self = this;
-            $.getJSON(this._getDataUrl(), function(data) {
+            this._loadJsonp(this._getDataUrl(), function(data) {
                 self._setData(data);
                 self._writeHtml();
             });
@@ -119,5 +141,5 @@ if (typeof Wannalunch == "undefined" || !Wannalunch) {
     Wannalunch.Widget.display = function(options) {
         var widget = new Wannalunch.Widget(options);
         widget.display();
-    }
+    };
 }());

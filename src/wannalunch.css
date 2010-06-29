@@ -103,6 +103,7 @@
 
 .wannalunch_widget_logo {
   background: url('wannalunch.png') no-repeat !important;
+  clear: both !important;
   height: 17px !important;
   width: 117px !important;
 }
